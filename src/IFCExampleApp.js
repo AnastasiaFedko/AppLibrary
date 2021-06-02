@@ -158,7 +158,7 @@ export class IFCExampleApp {
             model.traverse(object => {
                 if (object.isMesh) {
                     object.material = materialIFC;
-
+                    object.geometry.computeVertexNormals();
                 }
             });
             model.scale.set(2.0, 2.0, 2.0);
